@@ -30,11 +30,29 @@ export const Navbar: React.FC<NavbarProps> = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'py-2.5 bg-[#070908]/90 backdrop-blur-md border-b border-[#1E2821] shadow-2xl'
-          : 'py-5 bg-transparent'
+          ? 'bg-[#070908]/95 backdrop-blur-md border-b border-[#1E2821] shadow-2xl'
+          : 'bg-[#070908]/70 backdrop-blur-sm border-b border-[#1E2821]/50'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+      {/* Top Telemetry Strip */}
+      <div className="border-b border-[#1E2821]/40 bg-[#070908]/90 py-1 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono text-[#858C84] tracking-widest uppercase select-none">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 bg-[#62D58A] rounded-full inline-block animate-ping" />
+            <span>SYS.LOC // LATVERIA [45.18° N, 19.82° E]</span>
+            <span className="text-[#252A27]">|</span>
+            <span className="text-[#778078]">SEC: CLASSIFIED</span>
+          </div>
+          <div className="hidden sm:flex items-center gap-3">
+            <span>ARCHIVE ID: DOOM-2026-X</span>
+            <span className="text-[#252A27]">|</span>
+            <span className="text-[#62D58A]">LINK: ENCRYPTED</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
         {/* Left: Latverian Emblem / Logo */}
         <a
           href="#"

@@ -12,7 +12,7 @@ export const HeroSection: React.FC = () => {
   const { hero } = usePortfolioData();
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-tactical-grid overflow-hidden">
+    <section className="relative min-h-screen w-full flex items-center justify-center pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-tactical-grid overflow-hidden">
       {/* Background radial emerald vignette behind 3D core */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#173D28]/20 rounded-full blur-[140px] pointer-events-none" />
 
