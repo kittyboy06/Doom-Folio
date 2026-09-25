@@ -1,0 +1,515 @@
+{
+  "hero": {
+    "name": "Afsal Ahmed Khan A",
+    "tagline": "Turning ideas into apps, games, and AI-powered experiences.",
+    "roles": [
+      "Android Developer",
+      "Full Stack Developer",
+      "AI Developer",
+      "Unity Game Developer"
+    ],
+    "github": "https://github.com/kittyboy06",
+    "linkedin": "https://www.linkedin.com/in/afsal-ahmed-khan-a-9a6062332/",
+    "leetcode": "https://leetcode.com/kittyboy06",
+    "email": "afsalahmed2006@gmail.com",
+    "resumeUrl": "resume.pdf"
+  },
+  "about": {
+    "bio": "3rd-year AIML student at Jerusalem College of Engineering, Chennai. Winner of Cipher Quest (1st Place) and PALS Think2Impact Jury Award. Participated in AMD Slingshot Campus Days, Cyber Connect Hackathon, and multiple AI innovation programs. Building Android apps, full-stack web products, cognitive AI systems, and Unity games.",
+    "stats": [
+      {
+        "label": "Projects Shipped",
+        "value": "18",
+        "icon": "rocket"
+      },
+      {
+        "label": "LeetCode Solved",
+        "value": "56",
+        "icon": "zap"
+      },
+      {
+        "label": "CGPA",
+        "value": "8.0",
+        "icon": "target"
+      },
+      {
+        "label": "Year",
+        "value": "3rd CSE",
+        "icon": "graduation-cap"
+      }
+    ],
+    "leetcodeUrl": "https://leetcode.com/kittyboy06"
+  },
+  "achievements": [
+    {
+      "title": "PALS Think2Impact Jury Award Winner",
+      "year": "2026"
+    },
+    {
+      "title": "1st Place - Cipher Quest",
+      "year": "2024"
+    },
+    {
+      "title": "3rd Place - Hacker Arena",
+      "year": "2026"
+    },
+    {
+      "title": "AMD Slingshot Campus Days Ideathon Participant",
+      "year": "2026"
+    },
+    {
+      "title": "RYLA Leadership Program",
+      "year": "2025"
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "name": "Mobile",
+        "items": [
+          "Android",
+          "Kotlin",
+          "Jetpack Compose",
+          "Flutter",
+          "Dart",
+          "Capacitor",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Web & PWA",
+        "items": [
+          "React 19",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "PWA",
+          "Monaco Editor"
+        ]
+      },
+      {
+        "name": "Game Dev",
+        "items": [
+          "Unity Engine",
+          "C#",
+          "URP",
+          "WebGL Export",
+          "Minimax AI",
+          "Tilemaps",
+          "Physics 2D"
+        ]
+      },
+      {
+        "name": "AI & Cognitive Architecture",
+        "items": [
+          "Gemini 2.5",
+          "MediaPipe WASM",
+          "TensorFlow.js",
+          "Deno",
+          "Supabase Edge Functions",
+          "pgvector",
+          "Ollama",
+          "Cloud Run"
+        ]
+      },
+      {
+        "name": "Languages",
+        "items": [
+          "Kotlin",
+          "TypeScript",
+          "Python",
+          "C#",
+          "C++",
+          "Dart",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "name": "Tools & Infrastructure",
+        "items": [
+          "Git",
+          "GitHub",
+          "Android Studio",
+          "Docker",
+          "Tauri",
+          "VS Code",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "aether",
+      "title": "Aether: Personal Cognitive Architecture",
+      "description": "Long-term cognitive architecture & second mind system that continuously learns, evolves, and maintains an evidence-based model of user identity using Deno, Supabase PostgreSQL with pgvector, and Gemini 2.5.",
+      "tags": [
+        "Deno",
+        "TypeScript",
+        "Supabase",
+        "pgvector",
+        "Gemini 2.5",
+        "Cloud Run",
+        "Docker"
+      ],
+      "status": "Completed",
+      "category": "AI Systems",
+      "github": "https://github.com/kittyboy06/Aether",
+      "demo": ""
+    },
+    {
+      "id": "signbridge-ai",
+      "title": "SignBridge AI (Hackathon Project)",
+      "description": "Real-time sign language translation platform bridging communication gaps using client-side MediaPipe WASM, TensorFlow.js neural network (27 ASL/ISL gesture classes), anti-flicker filters, Gemini LLM, and 9-language speech synthesis.",
+      "tags": [
+        "React 19",
+        "MediaPipe WASM",
+        "TensorFlow.js",
+        "Gemini LLM",
+        "Supabase Edge",
+        "Web Speech"
+      ],
+      "status": "Completed",
+      "category": "AI Systems",
+      "github": "https://github.com/kittyboy06/SignBridge-AI",
+      "demo": ""
+    },
+    {
+      "id": "aether-console",
+      "title": "Aether Console Dashboard",
+      "description": "High-fidelity dark glassmorphic telemetry console and developer client for the Aether Chat cognitive ecosystem, featuring real-time reasoning drawers, latency dashboards, and knowledge graph visualizers.",
+      "tags": [
+        "React 19",
+        "Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase Edge",
+        "Glassmorphism"
+      ],
+      "status": "Completed",
+      "category": "Web & PWA",
+      "github": "https://github.com/kittyboy06/Aether-Console",
+      "demo": ""
+    },
+    {
+      "id": "musubi",
+      "title": "Musubi: Autonomous Life Intelligence",
+      "description": "Fully autonomous personal life intelligence system and living second brain that automatically extracts life data from natural conversation, connects unrelated insights, and runs cross-platform on Web, Android, and Windows.",
+      "tags": [
+        "React 19",
+        "Capacitor",
+        "Tauri",
+        "Dexie IndexedDB",
+        "Supabase",
+        "Gemini AI"
+      ],
+      "status": "Completed",
+      "category": "Cross-Platform",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "wardrobe-ai",
+      "title": "Wardrobe AI",
+      "description": "Private wardrobe inventory management and intelligent outfit recommendation app in Flutter & Dart. Features algorithmic outfit compatibility scoring based on color, pattern, wear frequency, and weather.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "Material 3",
+        "Algorithms",
+        "Mobile"
+      ],
+      "status": "Completed",
+      "category": "Mobile App",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "cipher-quest-os",
+      "title": "Cipher Quest OS / Treasure Hunt",
+      "description": "Interactive virtual web operating system and hackathon platform featuring an in-browser Monaco Code Editor IDE, interactive Terminal, File Manager, Riddle Solver, Task Manager, and real-time Supabase backend.",
+      "tags": [
+        "React 19",
+        "Monaco Editor",
+        "Supabase",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
+      "status": "Completed",
+      "category": "Web & PWA",
+      "github": "https://github.com/kittyboy06/Treasure-Hunt",
+      "demo": ""
+    },
+    {
+      "id": "smart-attendance",
+      "title": "Smart Attendance PWA",
+      "description": "Multi-role college attendance tracking and verification system with dedicated portals for Students, Class Representatives, Teachers, and Administrators, featuring offline-first PWA caching and JWT verification.",
+      "tags": [
+        "React 18",
+        "TypeScript",
+        "Supabase",
+        "LocalForage",
+        "PWA",
+        "Tailwind CSS"
+      ],
+      "status": "Completed",
+      "category": "Web & PWA",
+      "github": "https://github.com/kittyboy06/Attendance",
+      "demo": ""
+    },
+    {
+      "id": "fox-tale",
+      "title": "Fox Tale (2D Platformer Adventure)",
+      "description": "Feature-packed 2D adventure platformer game in Unity Engine. Includes overworld level selection map, boss tank battles with mine/bullet hazards, flying enemies, checkpoints, moving platforms, and audio management.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "Game Dev",
+        "Boss Fights",
+        "Particle FX",
+        "Audio System"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "kitchen-chaos",
+      "title": "Kitchen Chaos 3D",
+      "description": "3D co-op style culinary simulation game built in Unity Engine with C# and Universal Render Pipeline (URP). Includes interactive cutting/frying counters, recipe ScriptableObjects, customer order flow, and WebGL support.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "URP",
+        "WebGL",
+        "ScriptableObjects",
+        "3D Simulation"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": "https://play.unity.com/en/games/99f1682b-93d8-439b-aeda-716ccdc260e2/kitchen-chaos"
+    },
+    {
+      "id": "tic-tac-toe-webgl",
+      "title": "Tic Tac Toe WebGL (Minimax AI)",
+      "description": "Polished 2D retro pixel-art Tic Tac Toe game supporting Single Player against an unbeatable Minimax AI algorithm, Local 2-Player mode, retro chiptune audio, and WebGL web deployment.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "Minimax AI",
+        "WebGL",
+        "Pixel Art",
+        "Retro Audio"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": "https://play.unity.com/en/games/f9ae0011-60fc-4012-9869-b5c27aa5fe11/tic-tac-toe-by-kittyboy06"
+    },
+    {
+      "id": "valen",
+      "title": "Valen: Interactive Proposal Web App",
+      "description": "Playful interactive web application featuring erratic evasive button physics, spring scale motion, canvas confetti particle bursts, and reactive micro-interactions.",
+      "tags": [
+        "React 19",
+        "Framer Motion",
+        "Canvas Confetti",
+        "Tailwind CSS",
+        "UI Micro-interactions"
+      ],
+      "status": "Completed",
+      "category": "Web & PWA",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "unity-open-world-2d",
+      "title": "2D Open World RPG Engine",
+      "description": "Expansive 2D open-world game built in Unity Engine with C# and URP. Features player movement physics, animal & enemy AI pathfinding, inventory drop systems, and multi-scene level transitions.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "URP",
+        "AI Pathfinding",
+        "Tilemaps",
+        "Open World"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": "https://play.unity.com/en/games/54d74773-1a39-4a95-830e-63e7f9d9fb60/2d-top-down-open-world"
+    },
+    {
+      "id": "unity-2d-platformer",
+      "title": "2D Precision Physics Platformer",
+      "description": "Precision 2D platformer game in Unity Engine featuring custom 2D physics materials (friction & slippy physics), double jumping, wall sliding, hazard spike traps, coin collectibles, and level UI.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "Physics 2D",
+        "Platformer",
+        "TextMeshPro"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "unity-2d-topdown-rpg",
+      "title": "2D Top-Down Action RPG",
+      "description": "Action RPG featuring top-down directional movement, melee sword combat, enemy AI state machines, dynamic health bars, and dungeon tilemap levels.",
+      "tags": [
+        "Unity Engine",
+        "C#",
+        "State Machines",
+        "Melee Combat",
+        "Tilemaps"
+      ],
+      "status": "Completed",
+      "category": "Unity Games",
+      "github": "https://github.com/kittyboy06",
+      "demo": ""
+    },
+    {
+      "id": "arise-irl",
+      "title": "ARISE IRL",
+      "description": "Solo Leveling-themed calisthenics RPG Android app. Full gamification with XP, levels, quests, Supabase backend, and Gemini AI coaching.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "Supabase",
+        "Gemini AI",
+        "Jetpack Compose"
+      ],
+      "status": "In Development",
+      "category": "Mobile App",
+      "github": "https://github.com/kittyboy06/arise-irl",
+      "demo": ""
+    },
+    {
+      "id": "neurocart",
+      "title": "NeuroCart",
+      "description": "AI-powered adaptive shopping assistant built for AMD Slingshot Campus Days Chennai Hackathon. React + Vite + Supabase, deployed on Google Cloud Run.",
+      "tags": [
+        "React",
+        "Supabase",
+        "AI",
+        "Google Cloud Run",
+        "Hackathon"
+      ],
+      "status": "Completed",
+      "category": "AI Systems",
+      "github": "https://github.com/kittyboy06/neurocart",
+      "demo": "https://kittyboy06.github.io/NeuroCart/"
+    },
+    {
+      "id": "magic-embroidery",
+      "title": "Magic Embroidery",
+      "description": "Production ecommerce site for a Chennai embroidery business. Full product catalog, cart, order flow, and admin panel.",
+      "tags": [
+        "React",
+        "Vite",
+        "Supabase",
+        "Tailwind CSS",
+        "Ecommerce"
+      ],
+      "status": "In Development",
+      "category": "Web & PWA",
+      "github": "https://github.com/kittyboy06/magic-embroidery",
+      "demo": ""
+    },
+    {
+      "id": "aash-player",
+      "title": "Aash Player",
+      "description": "Offline Android music player in Kotlin + Jetpack Compose. Pro equalizer, Mini Capsule overlay, Dynamic Light for Vivo, and lock screen controls.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "Jetpack Compose",
+        "Music"
+      ],
+      "status": "In Development",
+      "category": "Mobile App",
+      "github": "https://github.com/kittyboy06/aash-player",
+      "demo": ""
+    }
+  ],
+  "timeline": [
+    {
+      "title": "1st Place — Cipher Quest",
+      "org": "Jerusalem College of Engineering",
+      "date": "Oct 2024",
+      "description": "Won the college-level competitive programming event."
+    },
+    {
+      "title": "Built NeuroCart — AMD Slingshot Hackathon, Chennai",
+      "org": "AMD Slingshot Campus Days Chennai",
+      "date": "April 2025",
+      "description": "Built NeuroCart, an AI-powered adaptive shopping assistant, in 24 hours. Deployed on Google Cloud Run."
+    },
+    {
+      "title": "Cyber Connect Hackathon",
+      "org": "Cyber Connect",
+      "date": "Dec 2025",
+      "description": "Participated and built secure web communication platforms."
+    },
+    {
+      "title": "PALS Think2Impact Jury Award Winner",
+      "org": "PALS + Naandi Foundation",
+      "date": "Jan 2026",
+      "description": "Member of Team Phantom Vanguard. Won Jury Award for solving real-world industry challenges."
+    },
+    {
+      "title": "AMD Slingshot Campus Days",
+      "org": "AMD India",
+      "date": "Apr 2026",
+      "description": "Built NeuroCart, an AI-powered adaptive shopping assistant using React, Supabase and AI workflows."
+    },
+    {
+      "title": "RYLA Leadership Program",
+      "org": "Rotaract",
+      "date": "2026",
+      "description": "Completed a 5-day leadership development and personal growth program."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Complete Full-Stack Web Development Bootcamp",
+      "issuer": "Udemy"
+    },
+    {
+      "name": "Unity 2D RPG: Complete Combat System",
+      "issuer": "Udemy"
+    },
+    {
+      "name": "Agentic Verse STTP",
+      "issuer": "SRMIST"
+    },
+    {
+      "name": "PALS Think2Impact Industry Problem Solving Workshop",
+      "issuer": "PALS"
+    },
+    {
+      "name": "AMD Slingshot Campus Days Ideathon",
+      "issuer": "AMD India"
+    }
+  ],
+  "contact": {
+    "email": "afsalahmed2006@gmail.com",
+    "github": "https://github.com/kittyboy06",
+    "linkedin": "https://www.linkedin.com/in/afsal-ahmed-khan-a-9a6062332/",
+    "leetcode": "https://leetcode.com/kittyboy06"
+  },
+  "footer": {
+    "year": "2026",
+    "name": "Afsal Ahmed Khan A",
+    "github": "https://github.com/kittyboy06",
+    "linkedin": "https://www.linkedin.com/in/afsal-ahmed-khan-a-9a6062332/"
+  }
+}

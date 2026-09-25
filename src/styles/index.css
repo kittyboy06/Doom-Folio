@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #070908;
+  --color-abyss: #0D120F;
+  --color-panel: #111612;
+  --color-panel-border: #1d2720;
+  --color-doom-deep: #173D28;
+  --color-doom: #235C3A;
+  --color-emerald: #62D58A;
+  --color-emerald-glow: rgba(98, 213, 138, 0.25);
+  --color-brass: #B8954A;
+  --color-brass-bright: #D5B968;
+  --color-gunmetal: #252A27;
+  --color-gunmetal-light: #3A403B;
+  --color-steel: #778078;
+  --color-latveria-text: #E7E4D8;
+  --color-latveria-muted: #858C84;
+
+  --font-display: "Chakra Petch", "Rajdhani", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-orbitron: "Orbitron", sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-panel-border);
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-latveria-text);
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scanline & Grid Background */
+.bg-scanlines {
+  background: linear-gradient(
+    rgba(18, 24, 20, 0) 50%,
+    rgba(0, 0, 0, 0.4) 50%
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.015),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.015)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+.bg-tactical-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(35, 92, 58, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 92, 58, 0.08) 1px, transparent 1px);
+}
+
+/* Custom Tactical Clipped Corners */
+.clip-corner-tl {
+  clip-path: polygon(14px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 14px);
+}
+
+.clip-corner-br {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%);
+}
+
+.clip-corner-both {
+  clip-path: polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);
+}
+
+/* Custom Glowing Border Shadows */
+.shadow-emerald-glow {
+  box-shadow: 0 0 20px -3px rgba(98, 213, 138, 0.25);
+}
+
+.shadow-brass-glow {
+  box-shadow: 0 0 16px -2px rgba(184, 149, 74, 0.3);
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070908;
+}
+::-webkit-scrollbar-thumb {
+  background: #173D28;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #235C3A;
+}
