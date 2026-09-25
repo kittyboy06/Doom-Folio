@@ -5,6 +5,7 @@ import { HudLabel } from '../hud/HudLabel';
 import { DoomPanel } from '../hud/DoomPanel';
 import { FlipCard } from '../ui/FlipCard';
 import { ScrollExpand } from '../ui/ScrollExpand';
+import { ProfileScanner3D } from '../3d/ProfileScanner3D';
 
 export const ProfileSection: React.FC = () => {
   const { about, achievements } = usePortfolioData();
@@ -159,9 +160,10 @@ export const ProfileSection: React.FC = () => {
 
         {/* Dossier Grid: Classified Flip Card + Biography & Honors */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT: 3D FlipCard Component (5 cols) */}
-          <div className="lg:col-span-5">
+          {/* LEFT: 3D FlipCard Component & 3D Biometric Scanner (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             <FlipCard front={cardFront} back={cardBack} />
+            <ProfileScanner3D />
           </div>
 
           {/* RIGHT: Dossier Narrative & Honors (7 cols) */}

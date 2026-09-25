@@ -1,5 +1,6 @@
 import React from 'react';
 import { TacticalOverlay } from './components/hud/TacticalOverlay';
+import { GlobalParticleField3D } from './components/3d/GlobalParticleField3D';
 import { Navbar } from './components/sections/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { SystemBootSection } from './components/sections/SystemBootSection';
@@ -13,6 +14,9 @@ import { Footer } from './components/sections/Footer';
 export const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-[#070908] text-[#E7E4D8] selection:bg-[#173D28] selection:text-[#62D58A] overflow-x-hidden">
+      {/* Ambient 3D Cursor-Gravity Particle Field */}
+      <GlobalParticleField3D />
+
       {/* Ambient Tactical HUD Scanlines & Vignette */}
       <TacticalOverlay />
 

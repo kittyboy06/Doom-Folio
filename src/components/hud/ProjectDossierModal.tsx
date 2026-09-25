@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { X, ExternalLink, Cpu } from 'lucide-react';
 import { GithubIcon } from '../ui/Icons';
 import { ProjectItem } from '../../types/portfolio';
+import { ProjectArtifact3D } from '../3d/ProjectArtifact3D';
 import { DoomButton } from './DoomButton';
 import { SystemBadge } from './SystemBadge';
 import { HudLabel } from './HudLabel';
@@ -74,6 +75,22 @@ export const ProjectDossierModal: React.FC<ProjectDossierModalProps> = ({ projec
           <h2 className="text-2xl sm:text-3xl font-bold font-['Chakra_Petch'] uppercase tracking-wide text-[#E7E4D8]">
             {project.title}
           </h2>
+        </div>
+
+        {/* 3D Holographic Artifact Projection Stage */}
+        <div className="w-full h-44 mb-6 bg-[#070908] border border-[#235C3A]/80 rounded-sm relative overflow-hidden flex items-center justify-center shadow-[inset_0_0_20px_rgba(98,213,138,0.15)]">
+          <div className="absolute top-2 left-3 text-[9px] font-mono text-[#62D58A] flex items-center gap-1.5 z-10">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#62D58A] animate-ping" />
+            <span>3D SPECIMEN MATRIX // KINETIC PROJECTION</span>
+          </div>
+          <div className="absolute top-2 right-3 text-[9px] font-mono text-[#778078] z-10">
+            DISCIPLINE: {project.category.toUpperCase()}
+          </div>
+          <ProjectArtifact3D
+            category={project.category}
+            isHovered={true}
+            className="w-full h-full"
+          />
         </div>
 
         {/* Description Section */}

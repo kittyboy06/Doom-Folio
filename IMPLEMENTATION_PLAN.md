@@ -1,77 +1,47 @@
-# DOCTOR DOOM // LATVERIAN ARCHIVE — IMPLEMENTATION PLAN
+# DOCTOR DOOM // LATVERIAN ARCHIVE — 3D UPGRADE IMPLEMENTATION PLAN
 
-## Overview
-Transform the repository into a high-craft, cinematic, production-grade 3D developer portfolio for **Afsal Ahmed Khan A**, based on the validated design in [DESIGN.md](file:///d:/Projects/Hackathon/Portfolio/DESIGN.md).
+## Phase 1: Viewport Lifecycle & Performance Foundation
+- [ ] Create `src/hooks/useCanvasVisibility.ts` utilizing `IntersectionObserver` to track viewport entry/exit and pause render loops when off-screen.
 
----
+## Phase 2: Ambient 3D Cursor-Gravity Particle Field
+- [ ] Create `src/components/3d/GlobalParticleField3D.tsx`:
+  * Fixed full-screen background WebGL canvas positioned at `z-0`.
+  * Instanced `THREE.Points` with emerald & brass glowing motes.
+  * Interactive mouse repulsion spring physics.
+  * Z-axis translation synced with scroll depth.
+  * Throttled to 60 particles on mobile with `prefers-reduced-motion` static fallback.
 
-## Phase 1: Project Scaffolding & Tooling Foundation
-- [ ] Initialize modern Vite + React 19 + TypeScript application in root.
-- [ ] Configure Tailwind CSS with the Latverian theme colors:
-  * Void Black: `#070908`, `#0D120F`, `#111612`
-  * Doom Green: `#173D28`, `#235C3A`
-  * Energy Emerald: `#62D58A`
-  * Brass: `#B8954A`, `#D5B968`
-  * Gunmetal: `#252A27`, `#3A403B`
-  * Typography: `#E7E4D8` (primary text), `#858C84` (muted)
-- [ ] Install core dependencies:
-  * `three`, `@types/three`
-  * `@react-three/fiber`, `@react-three/drei`
-  * `framer-motion`, `lucide-react`, `clsx`, `tailwind-merge`
-- [ ] Copy and link verified portfolio data from `idea/portfolio.json` into `src/data/portfolio.json`.
-- [ ] Create strict TypeScript interfaces (`src/types/portfolio.ts`) and data access hook (`src/hooks/usePortfolioData.ts`).
+## Phase 3: Semantic 3D Project Hologram Artifacts
+- [ ] Create `src/components/3d/ProjectArtifact3D.tsx`:
+  * Mapped to project categories:
+    - AI Systems: `NeuralTensor` (Dodecahedron + kinetic brass rings + pulsing energy nodes)
+    - Mobile: `HoloDevice` (Beveled slate + illuminated emerald screen face + HUD brackets)
+    - Web & PWA: `CyberTorus` (Torus Knot + orbiting kinetic data satellites)
+    - Unity Games: `PhysicsPolyhedron` (Icosahedron die tumbling with momentum)
+  * Wrapped in Drei's `<Float>`.
+  * Raycasting hover: ramps emissive emerald glow from `0.3` to `2.2`.
+- [ ] Integrate `ProjectArtifact3D` into `InventionsSection.tsx` cards and `ProjectDossierModal.tsx`.
 
----
+## Phase 4: Tactical 3D Armory Badges
+- [ ] Create `src/components/3d/ArmoryBadge3D.tsx`:
+  * Procedural 3D tokens for the 6 skill categories:
+    - Mobile: 3D beveled gunmetal tablet
+    - Web & PWA: 3D wireframe geodetic sphere with orbital equator
+    - Game Dev: 3D diamond octahedron with brass facets
+    - AI: 3D glowing tesseract hypercube
+    - Languages: 3D kinetic cipher disc
+    - Tools: 3D hexagonal mechanical bolt
+  * Hover acceleration from `0.5x` to `2.5x` spin with emerald rim flash.
+- [ ] Integrate `ArmoryBadge3D` into each module header in `ArmorySection.tsx`.
 
-## Phase 2: Core HUD & Design System Primitives
-- [ ] `DoomPanel`: Gunmetal tactical panels with clipped corners, subtle emerald borders, and brass rivets.
-- [ ] `DoomButton`: High-security action button with corner brackets and hover state.
-- [ ] `HudLabel`: Monospace technical metadata tags with status indicator pips.
-- [ ] `SystemBadge`: Security classification and category indicator badges.
-- [ ] Scanline backdrop, ambient vignette, and noise texture overlays.
+## Phase 5: 3D Holographic Biometric Scanner
+- [ ] Create `src/components/3d/ProfileScanner3D.tsx`:
+  * 3D biometric pedestal with floating Latverian sovereign crest.
+  * Volumetric vertical emerald laser sweep plane oscillating along the Y-axis.
+  * Biometric classification HUD telemetry.
+- [ ] Integrate `ProfileScanner3D` into `ProfileSection.tsx`.
 
----
-
-## Phase 3: The 5 Specialized UI Widgets
-- [ ] `TechText` (Terminal Decryptor): Scrambles characters (`01!@#$%^&*░▒▓`) before settling into decoded text.
-- [ ] `FlipCard` (Personnel Dossier): 3D CSS `preserve-3d` card with security badge on front and tactical skills matrix on back.
-- [ ] `ScrollExpand` (Archive Transition): Viewport scroll-driven container linking Hero into Profile.
-- [ ] `SmokeyFrame` (Atmospheric Border): WebGL/Canvas emerald smoke noise shader with subtle cursor turbulence.
-- [ ] `AiGooeyBlob` (Arcane Cognitive Core): SVG liquid metaball reactor (`feGaussianBlur` + `feColorMatrix`) for the Aether showcase.
-
----
-
-## Phase 4: 3D Scene Pipeline & Hero Centerpiece
-- [ ] `DoomCanvas`: R3F Canvas with responsive camera, ambient light, emerald rim backlight, and brass fill.
-- [ ] `LatverianCore`: Procedural 3D metallic mask, interlocking rotating kinetic brass rings, and glowing energy particle cloud.
-- [ ] `DoomModel`: Asynchronous GLB loader using `useGLTF` that automatically mounts `/models/doctor-doom.glb` if found.
-- [ ] `WebGLErrorBoundary`: Graceful fallback to 2D holographic scanner HUD.
-- [ ] Mouse parallax and idle motion via `useFrame`.
-
----
-
-## Phase 5: Content Sections Implementation
-- [ ] `Navbar`: Minimal floating HUD with status beacon `● LATVERIA ONLINE`, smooth section links, and mobile drawer.
-- [ ] `HeroSection`: "The Sovereign" hero with title, role rotator, actions, social links, and 3D character stage.
-- [ ] `SystemBootSection`: Terminal boot sequence with `TechText` decryption.
-- [ ] `ProfileSection`: Personnel dossier, metric stats (18 projects, 56 LeetCode, 8.0 CGPA), and the 3D `FlipCard`.
-- [ ] `ArmorySection`: Equipment module grids for Mobile, Web/PWA, Game Dev, AI, Languages, Tools.
-- [ ] `InventionsSection`: Archive of engineered projects with 3D tilt, tags, and featured `Aether` cognitive core powered by `AiGooeyBlob`.
-- [ ] `ProjectDossierModal`: Fullscreen technical blueprint modal for selected project.
-- [ ] `ChroniclesSection`: Vertical timeline with glowing emerald path and scroll reveals.
-- [ ] `ContactSection`: Communication terminals for GitHub, LinkedIn, Email, LeetCode inside `SmokeyFrame`.
-- [ ] `Footer`: Minimal military archive sign-off.
-
----
-
-## Phase 6: Accessibility, Responsive Tuning & Mobile Optimization
-- [ ] Reduced motion support via `prefers-reduced-motion`.
-- [ ] Mobile viewport optimizations (clamped DPR, 40 particles vs 150 on desktop, touch tap-to-flip).
-- [ ] Zero horizontal overflow verification.
-
----
-
-## Phase 7: Verification, Production Build & Git Sync
-- [ ] Verify `npm run build` succeeds with zero errors.
-- [ ] Verify all external links, email mailto, and project demos work.
-- [ ] Stage and push changes to `origin/main` using conventional commits.
+## Phase 6: Integration, Verification & Git Sync
+- [ ] Mount `GlobalParticleField3D` in `App.tsx`.
+- [ ] Verify `npm run build` succeeds with zero errors and optimized chunk sizes.
+- [ ] Commit with conventional message (`feat: integrate multi-section 3D interactions and particle physics`) and push to `origin/main`.

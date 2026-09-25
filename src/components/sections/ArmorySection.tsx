@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Smartphone, Globe, Gamepad2, BrainCircuit, Terminal, Wrench, Shield } from 'lucide-react';
 import { usePortfolioData } from '../../hooks/usePortfolioData';
 import { HudLabel } from '../hud/HudLabel';
 import { SystemBadge } from '../hud/SystemBadge';
+import { ArmoryBadge3D } from '../3d/ArmoryBadge3D';
 
 export const ArmorySection: React.FC = () => {
   const { skills } = usePortfolioData();
+  const [hoveredModule, setHoveredModule] = useState<number | null>(null);
 
   const getCategoryIcon = (categoryName: string) => {
     switch (categoryName.toLowerCase()) {
@@ -49,17 +51,22 @@ export const ArmorySection: React.FC = () => {
         {skills.map((category, index) => (
           <div
             key={category.name}
+            onMouseEnter={() => setHoveredModule(index)}
+            onMouseLeave={() => setHoveredModule(null)}
             className="relative bg-[#111612]/90 border border-[#1E2821] hover:border-[#235C3A] p-5 rounded-sm transition-all duration-300 hover:shadow-[0_0_20px_-3px_rgba(98,213,138,0.2)] group flex flex-col justify-between"
           >
             {/* Corner Rivet */}
             <div className="absolute top-2 right-2 w-1 h-1 rounded-full bg-[#B8954A]/60 group-hover:bg-[#D5B968]" />
 
             <div>
-              {/* Module Header */}
+              {/* Module Header with 3D Kinetic Badge */}
               <div className="flex items-center justify-between pb-3 border-b border-[#1E2821] mb-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 bg-[#0D120F] border border-[#1E2821] rounded-sm group-hover:border-[#235C3A]">
-                    {getCategoryIcon(category.name)}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#0D120F] border border-[#1E2821] rounded-sm group-hover:border-[#235C3A] flex items-center justify-center overflow-hidden">
+                    <ArmoryBadge3D
+                      categoryName={category.name}
+                      isHovered={hoveredModule === index}
+                    />
                   </div>
                   <div>
                     <h3 className="text-sm font-mono font-bold text-[#E7E4D8] uppercase tracking-wider group-hover:text-[#62D58A] transition-colors">

@@ -8,11 +8,13 @@ import { SystemBadge } from '../hud/SystemBadge';
 import { DoomButton } from '../hud/DoomButton';
 import { AiGooeyBlob } from '../ui/AiGooeyBlob';
 import { ProjectDossierModal } from '../hud/ProjectDossierModal';
+import { ProjectArtifact3D } from '../3d/ProjectArtifact3D';
 
 export const InventionsSection: React.FC = () => {
   const { projects } = usePortfolioData();
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [activeDossierProject, setActiveDossierProject] = useState<ProjectItem | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   const categories = ['ALL', 'AI Systems', 'Web & PWA', 'Mobile App', 'Unity Games'];
 
@@ -140,6 +142,8 @@ export const InventionsSection: React.FC = () => {
         {filteredProjects.map((project, idx) => (
           <div
             key={project.id}
+            onMouseEnter={() => setHoveredProject(project.id)}
+            onMouseLeave={() => setHoveredProject(null)}
             className="relative bg-[#111612] border border-[#1E2821] hover:border-[#235C3A] p-5 rounded-sm transition-all duration-300 hover:shadow-[0_0_20px_-3px_rgba(98,213,138,0.2)] flex flex-col justify-between group cursor-pointer"
             onClick={() => setActiveDossierProject(project)}
           >
@@ -159,8 +163,17 @@ export const InventionsSection: React.FC = () => {
                 {project.title}
               </h4>
 
+              {/* 3D Holographic Artifact Preview */}
+              <div className="w-full h-32 my-3 overflow-hidden bg-[#0D120F]/60 border border-[#1E2821]/80 rounded-sm">
+                <ProjectArtifact3D
+                  category={project.category}
+                  isHovered={hoveredProject === project.id}
+                  className="w-full h-full"
+                />
+              </div>
+
               {/* Description preview */}
-              <p className="text-xs font-mono text-[#858C84] line-clamp-3 leading-relaxed mb-4">
+              <p className="text-xs font-mono text-[#858C84] line-clamp-2 leading-relaxed mb-4">
                 {project.description}
               </p>
 

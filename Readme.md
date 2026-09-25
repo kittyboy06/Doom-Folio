@@ -56,6 +56,15 @@ Open `http://localhost:3000` to view the archive in your browser.
 npm run build
 ```
 
+### GitHub Pages Deployment
+Run the automated deployment script:
+```bash
+npm run deploy
+# or directly:
+deploy-gh-pages.bat
+```
+*(Supports `-y` for non-interactive, `-d <dir>` for custom folder, `--dry-run` to simulate, and `-n` to skip build)*
+
 ---
 
 ## 📂 Project Structure

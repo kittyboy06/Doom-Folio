@@ -1,49 +1,33 @@
 # DOCTOR DOOM // LATVERIAN ARCHIVE — 3D DEVELOPER PORTFOLIO
-## Comprehensive Architecture & Technical Design Specification
+## Comprehensive Architecture & Technical Design Specification (v2.0 — Extended 3D Interactions)
 
 **Subject**: Afsal Ahmed Khan A  
 **Classification**: AI Systems / Android / Web PWA / Unity Game Engine  
 **Project**: Doom-Folio (`kittyboy06/Doom-Folio`)  
-**Design Phase**: Validated Technical Design & Architectural Blueprint  
+**Design Phase**: Validated Technical Design & Extended 3D Spatial Interactions  
 
 ---
 
 ## 1. Executive Understanding Summary
 
-* **Objective**: Create a high-craft, cinematic, dark-themed 3D developer portfolio for **Afsal Ahmed Khan A**, styled as a classified personnel dossier inside **Doctor Doom’s Latverian Technological Archive**.
-* **Purpose**: Showcase Afsal's software engineering, cognitive AI systems, Android applications, and Unity game development achievements in an unforgettable, interactive medium for hackathons, recruiters, and collaborators.
-* **Target Audience**: Technical recruiters, hackathon juries, engineering peers, and technology partners looking for top-tier frontend craft and systems capability.
+* **Objective**: Transform the portfolio into a living, multi-dimensional Latverian technological archive with tactile 3D interactive elements spanning every section.
+* **Core 3D Expansions**:
+  1. **Interactive 3D Category Artifacts** in Inventions (AI Systems, Mobile, Web, Games) with `<Float>` physics and hover raycasting.
+  2. **Floating 3D Tactical Badges** in the Armory for each skill domain with kinetic orbital rings.
+  3. **3D Holographic Biometric Scanner** in the Profile section with oscillating laser beam.
+  4. **Ambient 3D Cursor-Gravity Particle Field** spanning the background with cursor repulsion and scroll depth.
 * **Key Constraints**:
-  * Silky 60 FPS performance on desktop with responsive degradation for mobile devices.
-  * Strict aesthetic discipline: Gunmetal armor (`#252A27`), deep emerald green (`#173D28`, `#235C3A`), glowing energy accents (`#62D58A`), and antique brass (`#B8954A`, `#D5B968`) on void black (`#070908`).
-  * Zero broken states: Graceful procedural 3D fallback if the Doctor Doom GLB model is absent or if WebGL encounters issues.
+  * Guaranteed **60 FPS** across all devices using viewport-aware rendering (`useCanvasVisibility`).
+  * One single draw-call for global particle fields via instanced `BufferGeometry`.
+  * Strict mobile optimization: DPR clamped to `1.0–1.5`, particle counts throttled to 60, zero scroll lag.
 * **Explicit Non-Goals**:
-  * No generic SaaS dashboards or standard developer template card grids.
-  * No comic-book cartoonish Marvel fan graphics or cliché cyberpunk neon clutter.
-  * No external backend dependencies for basic portfolio rendering; it must function as an ultra-fast, self-contained static SPA.
-  * No scroll-jacking or unskippable animations that impede navigation.
+  * No heavy multi-megabyte 3D model bloat that slows down initial load time.
+  * No scroll-jacking or disorienting camera movements that interfere with reading project details.
+  * No unselectable 3D text replacing accessible HTML content.
 
 ---
 
-## 2. Core Assumptions & Non-Functional Requirements
-
-### Assumptions
-* **[A1] Technology Stack**: React 19 + TypeScript + Vite + Tailwind CSS + Framer Motion + Lucide React + React Three Fiber (`@react-three/fiber`) & `@react-three/drei`.
-* **[A2] Portfolio Content**: Populated with Afsal's verified data from `idea/portfolio.json` (AIML at JCE Chennai, 18 projects shipped, 56 LeetCode, 8.0 CGPA, Cipher Quest Winner, PALS Think2Impact Award, projects including Aether, SignBridge AI, Musubi, etc.).
-* **[A3] 3D Character Pipeline**: R3F canvas housing an ambient Latverian chamber, emerald rim lighting, volumetric particles, and an interactive procedural Doom Core that seamlessly renders `public/models/doctor-doom.glb` if dropped in.
-* **[A4] Specialized Component Architecture**: Custom-engineered native implementations of the Flip Card, Tech Text boot terminal, Scroll Expand, Smokey Frame, and AI Gooey Reactor using Tailwind CSS, Framer Motion, and WebGL/SVG shaders.
-* **[A5] Version Control & Remote**: Conventional commit conventions (`feat:`, `style:`, `refactor:`) synced with `origin/main` on GitHub (`kittyboy06/Doom-Folio`).
-
-### Non-Functional Requirements
-1. **Performance**: 60 FPS target; throttled DPR (`Math.min(window.devicePixelRatio, 2)` on desktop, `1.5` on mobile); lazy loading and Three.js geometry/material garbage collection on unmount.
-2. **Scale & Delivery**: Static Single Page Application (SPA) optimized for CDN deployment on Vercel or GitHub Pages with zero cold starts.
-3. **Security & Privacy**: Zero leaked API keys or credentials; all external links use `rel="noopener noreferrer"`; safe `mailto:` encryption.
-4. **Reliability & Availability**: 100% resilient UI with automatic fallback from GLB character to interactive procedural Latverian Mask & Arcane Core when WebGL or asset loading is constrained.
-5. **Maintainability**: Centralized data in `src/data/portfolio.json` as the single source of truth for all projects, bio, skills, timeline, and stats.
-
----
-
-## 3. Decision Log
+## 2. Decision Log (Complete: D1 – D17)
 
 | # | Decision | Alternatives Considered | Rationale |
 |---|---|---|---|
@@ -58,50 +42,46 @@
 | **D9** | **Pure Tailwind + Framer Motion Widget Architecture** | Third-party compiled component packages | Eliminates external bundle fragility, matches the exact `#070908` / `#62D58A` / `#B8954A` palette, and ensures seamless responsive behavior. |
 | **D10** | **Hybrid 3D Pipeline: Procedural Core with Automatic GLB Hot-Swap** | Hardcoded GLB dependency; 2D static image fallback | Ensures the 3D scene looks breathtaking out-of-the-box, avoids broken states if the model is absent, and seamlessly displays `doctor-doom.glb` as soon as the file is placed in `public/models/`. |
 | **D11** | **Strict WebGL Error Boundary & Reduced-Motion Respect** | Silent failure; Ignoring accessibility media queries | Guarantees accessibility for motion-sensitive users and ensures the portfolio remains fully browsable even on low-end machines without WebGL. |
+| **D12** | **Multi-Section 3D Expansion** | Keeping 3D restricted strictly to Hero | Deepens immersion and creates a tangible, multi-dimensional Latverian archive where every section responds to spatial user interaction. |
+| **D13** | **Latverian Arcane Cybernetic 3D Aesthetic** | Photorealistic PBR metals; Monochromatic wireframe glitch | Perfectly harmonizes with the `#070908` void black, `#62D58A` emerald energy, and `#B8954A` brass palette while offering dynamic hover lighting. |
+| **D14** | **Modular R3F Island Architecture with Viewport-Aware Rendering** | Single full-page canvas with Drei `<View>` portals; 2.5D CSS hybrid | Gives total DOM component independence, guarantees zero GPU waste on off-screen sections, and isolates WebGL error boundaries cleanly. |
+| **D15** | **Semantic Category-Driven 3D Artifacts** | Identical generic 3D cube for all projects; Loading external GLBs for 18 projects | Procedurally generates distinctive, instant-loading 3D artifacts mapped to Afsal's 4 core disciplines (AI, Mobile, Web, Games) with zero network latency. |
+| **D16** | **3D Tactical Armory Tokens & Hologram Biometric Scanner** | Static SVG icons; video loops | Replaces flat 2D icons with tangible, reactive 3D metallic artifacts, reinforcing the tactile sensation of Doom's laboratory equipment. |
+| **D17** | **Fixed Background 3D Cursor-Gravity Particle Field** | 2D canvas noise; heavyweight fluid simulation | Delivers genuine 3D spatial depth that connects every section into a single unified Latverian atmospheric chamber, while keeping CPU/GPU load minimal via instanced points. |
 
 ---
 
-## 4. Final Architectural Design
+## 3. Detailed 3D Component Specifications
 
-### 4.1 System & Directory Layout
-```
-src/
-├── assets/                  # Emblems, audio cues, noise textures
-├── components/
-│   ├── 3d/                  # DoomCanvas, LatverianCore, DoomModel, Particles, ErrorBoundary
-│   ├── ui/                  # FlipCard, TechText, ScrollExpand, SmokeyFrame, AiGooeyBlob
-│   ├── hud/                 # DoomPanel, DoomButton, HudLabel, SystemBadge, DossierModal
-│   └── sections/            # Hero, SystemBoot, Profile, Armory, Inventions, Chronicles, Contact
-├── data/
-│   └── portfolio.json       # Centralized verified data
-├── hooks/                   # usePortfolioData, useParallax, useReducedMotion
-├── types/                   # portfolio.ts (Strict TypeScript interfaces)
-├── styles/                  # Tailwind theme, emerald glow utilities, scanlines
-└── App.tsx                  # Root layout, ambient scanline overlay, audio HUD
-```
+### 3.1 `GlobalParticleField3D.tsx`
+* Fixed background WebGL canvas positioned at `z-0` behind main content.
+* 250 instanced glowing dust points (`THREE.Points`) with custom shader spring physics.
+* Dynamic mouse repulsion: Particles within 1.5 units radius push away smoothly and lerp back into position.
+* Translates on Z axis with scroll progress to produce ambient parallax.
 
-### 4.2 Data Pipeline
-* `src/data/portfolio.json` serves as the sole source of truth.
-* All components access data through the `usePortfolioData()` typed hook.
-* Modal state (such as opening full project dossiers) is handled cleanly via lightweight React component state.
+### 3.2 `ProjectArtifact3D.tsx`
+* Renders unique procedural artifacts based on project category:
+  1. **AI Systems**: Rotating Dodecahedron with concentric brass data rings and pulsing emerald vertices.
+  2. **Mobile Apps**: Floating gunmetal monolith with illuminated screen-plane and HUD brackets.
+  3. **Web & PWA**: Interlocking Torus Knot with orbiting kinetic data satellites.
+  4. **Unity Games**: Faceted Icosahedron physics die tumbling with momentum.
+* Wraps in `<Float speed={2} rotationIntensity={0.6} floatIntensity={0.8}>`.
+* Cursor raycasting triggers emission boost from `0.3` to `2.2`.
 
-### 4.3 The 5 Specialized UI Widgets
-1. **`FlipCard`**: 3D CSS `preserve-3d` dossier card with classified front statistics and reverse core competencies.
-2. **`TechText`**: Terminal glyph scrambler (`01!@#$%^&*░▒▓`) resolving into decoded military HUD labels.
-3. **`ScrollExpand`**: Scroll-driven viewport container connecting Hero to Subject Profile.
-4. **`SmokeyFrame`**: Canvas-based WebGL volumetric emerald smoke frame around Hero and Contact stations.
-5. **`AiGooeyBlob`**: SVG liquid metaball reactor (`feGaussianBlur` + `feColorMatrix`) for the Aether Cognitive Core.
+### 3.3 `ArmoryBadge3D.tsx`
+* Kinetic 3D procedural tokens for the 6 skill modules:
+  * Mobile: 3D beveled gunmetal tablet.
+  * Web & PWA: 3D wireframe geodetic sphere with orbital equator.
+  * Game Dev: 3D diamond octahedron with brass facets.
+  * AI: 3D glowing tesseract hypercube.
+  * Languages: 3D inscribed cipher disc.
+  * Tools: 3D hexagonal mechanical bolt.
+* Rotates continuously; accelerates and flashes emerald rim lighting upon parent card hover.
 
-### 4.4 3D Rendering Pipeline
-* **Engine**: React Three Fiber (`@react-three/fiber`) + Drei (`@react-three/drei`).
-* **Centerpiece**: Procedural Latverian mask & arcane reactor with rotating brass rings and volumetric particle clouds.
-* **Model Integration**: Dynamic `useGLTF` loader that mounts `/models/doctor-doom.glb` if available.
-* **Lighting**: Multi-point rig featuring `#62D58A` emerald rim backlight and `#D5B968` warm brass key lighting.
-* **Camera**: Spring-damped cursor parallax with smooth `lerp` tracking.
+### 3.4 `ProfileScanner3D.tsx`
+* 3D biometric pedestal with rotating Latverian sovereign crest.
+* Volumetric vertical emerald laser sweep plane oscillating along the Y axis.
+* Real-time telemetry indicators.
 
-### 4.5 Error Handling & Performance
-* `<WebGLErrorBoundary>` fallbacks to 2D holographic scanner HUD on GPU context loss.
-* `prefers-reduced-motion` suppresses parallax and rapid transitions.
-* Target 60 FPS, with DPR capped at 2.0 (desktop) and 1.5 (mobile), plus automatic Three.js memory disposal.
-
----
+### 3.5 `useCanvasVisibility.ts`
+* Reusable hook leveraging `IntersectionObserver` to unmount or pause off-screen 3D micro-canvases when outside of the viewport.
